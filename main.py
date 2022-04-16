@@ -15,3 +15,50 @@ class MainWindow(QMainWindow):
         """
         self.setWindowTitle("Stack Layout PyQt5")
         self.setGeometry(40, 40, 800, 700)
+        self.display_contents()
+    
+    def display_contents(self):
+        """
+        Display the widget for the main window
+        Like tab widget.
+        """
+        # Create the main layout for the program
+        main_layout = QVBoxLayout()
+        # Create buttons layout
+        btn_layout = QHBoxLayout()
+        # Add the btn layout to the main layout:
+        main_layout.addLayout(btn_layout)
+        # Create stacked layout 
+        # Means multiple widgets in the same space of the main window
+        self.stack_layout = QStackedLayout()
+        # Create btns && push it to btn_layout
+        btn = QPushButton("red")
+        btn_layout.addWidget(btn)
+        btn.pressed.connect(self.active_lab_1)
+        
+        btn = QPushButton("blue")
+        btn_layout.addWidget(btn)
+        btn.pressed.connect(self.active_lab_2)
+        
+        btn = QPushButton("green")
+        btn_layout.addWidget(btn)
+        btn.pressed.connect(self.active_lab_3)
+        
+        # Create Stacked and push it to stacked layout
+        self.stack_layout.addWidget(Color("red"))
+        self.stack_layout.addWidget(Color("blue"))
+        self.stack_layout.addWidget(Color("green"))
+        
+        # Add stacked layout to the main layout out:
+        main_layout.addLayout(self.stack_layout)
+        # Create the container that use the main_layout
+        container = QWidget()
+        # Set the main layout to the container:
+        container.setLayout(main_layout)
+        # Set the contrainer as central widget for the main window:
+        self.centralWidget(container)
+        
+        
+    
+    
+        
