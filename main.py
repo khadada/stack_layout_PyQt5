@@ -56,9 +56,24 @@ class MainWindow(QMainWindow):
         # Set the main layout to the container:
         container.setLayout(main_layout)
         # Set the contrainer as central widget for the main window:
-        self.centralWidget(container)
-        
-        
+        self.setCentralWidget(container)
+    
+    def active_lab_1(self):
+        """
+        Change to index of stacked layout [Z-index] to: 0
+        """
+        self.stack_layout.setCurrentIndex(0)
+    def active_lab_2(self):
+        """
+        Change to index of stacked layout [Z-index] to: 1
+        """
+        self.stack_layout.setCurrentIndex(1)
+    def active_lab_3(self):
+        """
+        Change to index of stacked layout [Z-index] to: 2
+        """
+        self.stack_layout.setCurrentIndex(2)
+
     
     
         
