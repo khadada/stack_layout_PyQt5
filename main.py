@@ -73,7 +73,14 @@ class MainWindow(QMainWindow):
         Change to index of stacked layout [Z-index] to: 2
         """
         self.stack_layout.setCurrentIndex(2)
-
+ 
+ 
+ # Run the program:
+if __name__ == "__main__":
+    app = QApplication(sys.argv)
+    main_window = MainWindow()
+    sys.exit(app.exec_())
+       
     
     
         
