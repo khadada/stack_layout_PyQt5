@@ -1,6 +1,6 @@
 # Import necessary modules and classes:
 import sys
-from PyQt5.QtWidgets import (QApplication, QMainWindow, QWidget,QStackedLayout)
+from PyQt5.QtWidgets import (QApplication, QMainWindow, QWidget,QStackedLayout,QPushButton)
 from custom_widget_placeholder import Color
 
 class MainWindow(QMainWindow):
